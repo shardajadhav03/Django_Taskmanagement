@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,12 +22,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d-u0n38malyr-g5od)+hm7ka+*emv-hq(k3=f85ny9%8d2c8kj'
+# SECRET_KEY = 'o!&-z&zg%fx7@(p**@(00yc14v6g6j_*=nbu8k1l3k=insz2w7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+# HTTP Strict Transport Security (HSTS)
+# SECURE_HSTS_SECONDS = 31536000  # Set to a longer duration for production (e.g., 31536000 for one year)
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
+
+# Redirect all HTTP requests to HTTPS
+# SECURE_SSL_REDIRECT = True
+
+# Secure cookies settings
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 # Application definition
 
